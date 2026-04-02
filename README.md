@@ -58,7 +58,13 @@ This terminal feature is the main creative twist of the project.
 - Git
 - GitHub
 
----
+## GitHub Repository
+https://github.com/mytrailsai-star/portfolio
+
+## Run Locally
+Open `index.html` directly in browser  
+or use the VS Code Live Server extension for local preview.
+
 
 ## Project Folder Structure
 
