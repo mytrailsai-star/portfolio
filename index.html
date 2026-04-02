@@ -1,0 +1,154 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Divya Banoth | Developer Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="brand" aria-label="logo">DB</div>
+    <nav class="nav" aria-label="Main navigation">
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+      <a href="#game" class="secondary">Maze</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="hero" class="section hero">
+      <div class="hero-content">
+        <h1>Hi, I’m Divya Banoth</h1>
+        <p>Aspiring Python & AI developer building accessible web apps and machine-learning prototypes with real-world impact.</p>
+        <div class="cta-row">
+          <a href="#projects" class="btn">View Projects</a>
+          <a href="#game" class="btn ghost">Maze Navigation</a>
+        </div>
+      </div>
+      <div class="hero-ascii" aria-hidden="true">
+        <pre>
+  ____  _   _ _   _ _   _
+ |  _ \| | | | \ | | \ | |
+ | | | | | | |  \| |  \| |
+ | |_| | |_| | |\  | |\  |
+ |____/ \___/|_| \_|_| \_|
+        </pre>
+      </div>
+    </section>
+
+    <section id="game" class="section game-section">
+      <h2>Interactive Maze Navigator</h2>
+      <p>Use arrow keys or WASD to move the avatar through the grid. On mobile, use the buttons below.</p>
+      <div class="game-container" aria-label="interactive maze navigation">
+        <canvas id="mazeCanvas" width="540" height="320"></canvas>
+        <div class="game-status" id="gameStatus">Move the avatar to a node to jump to the section.</div>
+      </div>
+      <div class="mobile-game-help" id="mobileGameHelp">
+        <p>Mobile mode: Tap a button to jump to the section.</p>
+        <div class="mobile-nodes">
+          <button data-target="about">About</button>
+          <button data-target="skills">Skills</button>
+          <button data-target="projects">Projects</button>
+          <button data-target="contact">Contact</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section info-section">
+      <h2>About</h2>
+      <p>My name is Divya Banoth, a Computer Science graduate from Hyderabad, with a passion for AI and full-stack development. I love turning research ideas into user-friendly tools and interactive experiences.</p>
+      <p>My journey includes building automation scripts and web development while mastering Python, JavaScript, and modern UI design.</p>
+    </section>
+
+    <section id="skills" class="section info-section">
+      <h2>Skills</h2>
+      <ul class="skills-grid">
+        <li><strong>Languages:</strong> Python, Java, SQL, C, JavaScript</li>
+        <li><strong>Frontend:</strong> HTML, CSS, JS, responsive design, accessibility</li>
+        <li><strong>Backend:</strong> Flask, FastAPI, REST, SQLite</li>
+        <li><strong>Data/AI:</strong> pandas, scikit-learn, NLP, transformers basics</li>
+        <li><strong>Tools:</strong> Git, GitHub, VS Code </li>
+        <li><strong>Soft skills:</strong> problem-solving, teamwork, communication, curiosity</li>
+      </ul>
+    </section>
+
+    <section id="projects" class="section info-section">
+      <h2>Projects</h2>
+      <div class="project-cards">   
+        <article class="card">
+          <h3>Resume JD Matcher AI</h3>
+          <p>Analyzes resume vs. job description and provides match scoring plus keyword gap insights.</p>
+          <p><strong>Tech:</strong> Python, Flask, Streamlit, NLP</p>
+          <p><strong>Live:</strong> <a href="./resume-jd-matcher/index.html" target="_blank" rel="noopener">Open local project</a></p>
+          <ul>
+            <li>Keyword extraction, TF-IDF similarity</li>
+            <li>Highlight missing skills and recommend improvements</li>
+            <li>Simple web interface for recruiters and candidates</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <h3>Golf Platform</h3>
+          <p>Interactive dashboard for tracking golf sessions, calculating performance metrics, and visualization.</p>
+          <p><strong>Tech:</strong> Python, Flask, JavaScript</p>
+          <p><strong>Live:</strong> <a href="./golf-platform/index.html" target="_blank" rel="noopener">Open local project</a></p>
+          <ul>
+            <li>Real-time score updates and dynamic charts</li>
+            <li>Practice mode interactions and analytics summary</li>
+            <li>Mobile-first design with spirited UI animations</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <h3>Command Maze Portfolio</h3>
+          <p>This portfolio itself, with a unique interactive maze interface for section navigation.</p>
+          <p><strong>Tech:</strong> HTML, CSS, JavaScript</p>
+          <p><strong>Live:</strong> <a href="./index.html" target="_blank" rel="noopener">Open local project</a></p>
+          <ul>
+            <li>Canvas-based node navigation (keyboard + mobile fallback)</li>
+            <li>Accessible layout and aesthetic branding</li>
+            <li>Professional, employer-ready content structure</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact" class="section info-section">
+      <h2>Contact</h2>
+      <p>Let’s collaborate. Send me a message or connect via email, LinkedIn, or GitHub.</p>
+      <form id="contactForm" class="contact-form" novalidate>
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required maxlength="80" placeholder="Your name" />
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required placeholder="you@example.com" />
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" required rows="5" placeholder="How can I help?"></textarea>
+
+        <button type="submit" class="btn">Send message</button>
+        <div id="formFeedback" role="status" aria-live="polite"></div>
+      </form>
+
+      <div class="contact-links">
+        <a href="mailto:mytrailsai@gmail.com">mytrailsai@gmail.com</a>
+        <a href="https://linkedin.com/in/divyabanoth" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://github.com/divyabanoth" target="_blank" rel="noopener">GitHub</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Made by Divya • 2026 • Mobile-friendly interaction-first portfolio</p>
+  </footer>
+
+  <script src="Script.js"></script>
+</body>
+</html>
